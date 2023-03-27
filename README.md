@@ -2,3 +2,6 @@ This github page's sole porpose is to be a link tree until i can get the motivat
 
 ### BUGS
 * issue with the scaling can fix but too lazy ehe -_O
+
+
+https://landchit.github.io
