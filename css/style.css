@@ -25,6 +25,13 @@ a:hover, a:active {
     
 }
 
+a.black, a.black:visited{
+    color: black;
+}
+a.black:hover{
+    opacity: 70%;
+}
+
 .center{
     display: grid;
     place-items: center;
