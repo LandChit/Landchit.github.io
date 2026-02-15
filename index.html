@@ -3,49 +3,151 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/output.css">
+    <title>LandChit</title>
 </head>
 
-<body>
-    <div class="center">
-        <div class="content">
-            <div class="title">
-                <img class="profile" src="https://avatars.githubusercontent.com/u/78423278?v=4">
-                <h1 style="margin-top:10px">LandChit's Links</h1>
-                <p style="font-style: italic;">Welcome to my extra nice page this is boring ngl -- there might be some problems on some devices idk</p>
-                <div style="display: flex; border-bottom:1px solid black;">
-                    <a target="_blank" class="black" href="https://www.youtube.com/@landchit"><i class="fa-brands fa-youtube fa-xs"></i></a>&nbsp;
-                    <a target="_blank" class="black" href="https://t.me/LandChit"><i class="fa-brands fa-telegram fa-xs"></i></a>&nbsp;
-                    <a target="_blank" class="black" href="https://twitter.com/LandChit"><i class="fa-brands fa-twitter fa-xs"></i></a>&nbsp;
+<body class="bg-white text-black pt-7 px-7">
+    <div style="min-height: 100vh;">
+        <div class="flex justify-between" id="main">
+            <div class="">
+                <span class="text-4xl font-bold">Chit</span>
+            </div>
+            <div class="flex items-center gap-4 font-bold">
+                <a href="#technologies"> Technologies</a>
+                <a href="#projects"> Projects</a>
+                <a href="#about"> About Me</a>
+            </div>
+        </div>
+        <div class="flex justify-center mt-10">
+            <div class="relative w-150 sm mx-auto">
+                <div class="absolute bg-gray-200 w-full h-full"></div>
+
+                <img src="assets/img/profile.png" alt="profile" class="w-full h-auto"
+                    style="mask-image: linear-gradient(to top, transparent, black 40%);">
+
+                <div class="absolute inset-0 flex pt-[90%] justify-center ">
+                    <div class="flex flex-row gap-3 h-fit">
+                        <a href="https://discord.com/users/574436404654899210"
+                            class="bg-black hover:bg-gray-800 hover:outline-gray-800 outline-3 outline-black text-white font-bold py-3 px-7 rounded"
+                            target="_blank">
+                            Contact Me
+                        </a>
+                        <a class="bg-gray-700/10 outline-3  hover:bg-gray-700/20 hover:text-gray-900 font-bold py-3 px-10 rounded"
+                            href="https://github.com/LandChit" target="_blank">
+                            Github
+                        </a>
+                    </div>
                 </div>
             </div>
-            <ul class="list">
-                <u>Links:</u>
-                <li>
-                    <a href="https://github.com/LandChit/reviewerpy-cli" target="_blank">ReviewerPy-cli</a>
-                </li>
-                <!-- DISCORD BOTS -->
-                <li>
-                    <a href="https://landchit.github.io/discord-bots/" target="_blank">Discord Bots</a>
-                </li>
-                
-                    <a href="https://landchit.github.io/discord-bots/r/inv-jotter" target="_blank">- Jotter Discord
-                        Bot</a>
-                <!-- END OF DISCORD BOTS -->
-                    
-            </ul>
         </div>
     </div>
 
-    <!-- FROM CodeCeTra -->
-    <div id="particles-js"></div>
-    <script src="js/particles.js"></script>
-    <script src="js/app.js"></script>
-    <!--  -->
+    <div style="min-height: 100vh;">
+        <div class="max-w-4xl mx-auto flex flex-col items-center pt-3">
+            <h1 class="text-3xl font-bold mb-5 pt-20" id="technologies">Technologies</h1>
+            <div class="flex flex-wrap justify-center outline-4 p-4 rounded">
+                <div class="w-24 h-24 p-2 bg-white">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Flutter_logo.svg" alt="Flutter"
+                        class="w-full h-full object-contain">
 
-    <script src="https://kit.fontawesome.com/ab880f6949.js" crossorigin="anonymous"></script>
+                </div>
+                <div class="w-24 h-24 bg-gray-200 p-2 bg-gray-200 rounded"><img
+                        src="assets/img/Java_programming_language_logo.png" alt="Java"
+                        class="w-full h-full object-contain">
+                </div>
+
+                <div class="w-24 h-24 p-2 rounded">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/120px-Python-logo-notext.svg.png"
+                        alt="Python" class="w-full h-full object-contain">
+                </div>
+                <div class="w-24 h-24 p-2 bg-gray-200 rounded">
+                    <img src="assets/img/docker-mark-blue.svg" alt="Docker" class="w-full h-full object-contain">
+
+                </div>
+                <div class="w-24 h-24 p-2 rounded">
+                    <img src="assets/img/Flask_logo.png" alt="Flask" class="w-full h-full object-contain">
+
+                </div>
+                <div class="w-24 h-24 bg-gray-200 p-2 rounded">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/960px-Octicons-mark-github.svg.png?20180806170715"
+                        alt="GitHub" class="w-full h-full object-contain">
+                </div>
+            </div>
+
+            <div class="justify-left mt-5 bg-gray-100 p-5 rounded">
+                <span class="text-2xl font-bold">Information</span>
+                <p>Even though my knowledge is still limited, I am passionate about learning and improving my skills in
+                    these technologies.</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="min-height: 100vh;">
+        <div class="max-w-4xl mx-auto flex flex-col items-center pt-3">
+            <h1 class="text-3xl font-bold mb-5 mt-20" id="projects">Projects</h1>
+            <div class="flex flex-wrap justify-center outline-4 p-4 rounded gap-2">
+                <div class="w-64 h-32 p-2 bg-white rounded">
+                    <a class="font-bold text-lg hover:text-green-500 transition duration-300"
+                        href="https://github.com/LandChit/reviewerpy-cli" target="_blank">ReviewerPy</a>
+                    <p>This is a simple tool that I built to help study. It helps with asking questions and
+                        memorization.</p>
+                </div>
+                <div class="w-64 h-32 p-2 bg-gray-200 rounded">
+                    <a class="font-bold text-lg hover:text-blue-500 transition duration-300"
+                        href="https://github.com/LandChit/quiz-game" target="_blank">Chitils</a>
+                    <p>Xiaomi Phone Utility app specifically for the POCO X3 GT.</p>
+                </div>
+                <div class="w-64 h-32 p-2 bg-white rounded">
+                    <a class="font-bold text-lg hover:text-green-500 transition duration-300"
+                        href="https://github.com/LandChit/wordle" target="_blank">Jotter (Discord Bot)</a>
+                    <p>A discord bot designed for notetaking, organization, and sharing. This is a link to join the bot.
+                    </p>
+                </div>
+                <div class="w-64 h-32 p-2 bg-gray-200 rounded">
+                    <a class="font-bold text-lg hover:text-pink-500 transition duration-300"
+                        href="https://github.com/LandChit/archdots" target="_blank">ArchLinux DotFiles</a>
+                    <p>My personal Arch Linux configuration files.</p>
+                </div>
+                <div class="w-64 h-32 p-2 bg-white rounded">
+                    <a class="font-bold text-lg hover:text-yellow-500 transition duration-300"
+                        href="https://discord.com/invite/5g7eZRURE?fbclid=IwY2xjawP-TMxleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR56ej1TunSpTLVvheZ_7Sm0t5XSitEMKE7E-nQiz8xGguaunRigdsGqexaT5g_aem_zXV8QPJdAXsRaMhSt0Uneg"
+                        target="_blank">SolaraCity (FiveM Server)</a>
+                    <p>A FiveM server focusing on roleplay rather than just fighting. This is a
+                        link for the Discord Server</p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <div style="height: 100vh;">
+        <div class="max-w-4xl mx-auto flex flex-col items-center pt-3">
+            <h1 class="text-3xl font-bold mb-5 mt-20" id="about">About Me</h1>
+            <div class="flex flex-wrap justify-center outline-4 p-4 rounded gap-2">
+                <p class="text-lg">I am a passionate software developer with a strong interest in learning and
+                    improving my skills. I have experience working on various projects, including web development,
+                    and mobile app development. I am always eager to take on new challenges and
+                    collaborate with others to create innovative solutions.</p>
+                <!-- Socials -->
+                <div class="flex flex-row gap-4 mt-5">
+                    <a href="https://t.me/LandChit" target="_blank"
+                        class="text-gray-600 hover:text-gray-900 transition duration-300">Telegram</a>
+                    <a href="https://github.com/LandChit" target="_blank"
+                        class="text-gray-600 hover:text-gray-900 transition duration-300">GitHub</a>
+                    <a href="https://twitter.com/LandChit" target="_blank"
+                        class="text-gray-600 hover:text-gray-900 transition duration-300">Twitter</a>
+                    <a href="https://www.youtube.com/@landchit " target="_blank"
+                        class="text-gray-600 hover:text-gray-900 transition duration-300">Youtube</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
