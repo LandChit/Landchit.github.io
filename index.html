@@ -7,12 +7,19 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/output.css">
+    <script src="assets/js/navigation_scroll.js" defer></script>
     <title>LandChit</title>
 </head>
 
 <body class="bg-white text-black pt-7 px-7 pb-20">
+    <!-- Floating Home Button -->
+    <button id="floatingHome" onclick="window.scrollTo({top: 0});"
+        class="rounded-full bg-black px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-gray-800">
+        ↑
+    </button>
+
     <div style="min-height: 100vh;" id="home">
-        <div class="flex justify-between" id="main">
+        <div class="fixed left-0 right-0 top-0 z-40 flex justify-between px-7 pt-7" id="nav">
             <div class="">
                 <span class="text-4xl font-bold">Chit</span>
             </div>
@@ -22,7 +29,7 @@
                 <a href="#about"> About Me</a>
             </div>
         </div>
-        <div class="flex justify-center mt-10">
+        <div class="flex justify-center mt-20">
             <div class="relative w-150 sm mx-auto">
                 <div class="absolute bg-gray-200 w-full h-full"></div>
 
@@ -47,7 +54,7 @@
     <div id="content"
         class="relative mt-12 overflow-hidden rounded-3xl border border-gray-200 bg-gradient-to-b from-gray-50 via-white to-gray-100 px-4 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.25)] sm:px-8">
         <section class="min-h-screen" id="technologies">
-            <div class="mx-auto flex min-h-screen w-full max-w-4xl flex-col justify-center gap-6 py-12 sm:py-16">
+            <div class="mx-auto flex w-full max-w-4xl flex-col justify-center gap-6 py-12 sm:py-16">
                 <h1 class="text-center text-3xl font-bold">Technologies</h1>
                 <div class="grid w-full auto-rows-[110px] grid-cols-2 gap-3 p-4 sm:grid-cols-4">
                     <div
@@ -91,7 +98,7 @@
         </section>
 
         <section class="min-h-screen border-t border-gray-200/80" id="projects">
-            <div class="mx-auto flex min-h-screen w-full max-w-4xl flex-col justify-center gap-6 py-12 sm:py-16">
+            <div class="mx-auto flex w-full max-w-4xl flex-col justify-center gap-6 py-12 sm:py-16">
                 <h1 class="text-center text-3xl font-bold">Projects</h1>
                 <div class="grid w-full grid-cols-1 gap-3 p-4 sm:grid-cols-2">
                     <div
@@ -105,17 +112,16 @@
                     <div
                         class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
                         <a class="text-lg font-semibold tracking-tight text-gray-900 transition hover:text-black"
-                            href="https://github.com/LandChit/quiz-game" target="_blank">Chitils</a>
+                            href="https://github.com/LandChit/Chitils" target="_blank">Chitils</a>
                         <p class="mt-1 text-sm leading-relaxed text-gray-700">Xiaomi Phone Utility app specifically for
-                            the POCO X3 GT.</p>
+                            the POCO X3 GT. Although it may also work on other phones.</p>
                     </div>
                     <div
                         class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
                         <a class="text-lg font-semibold tracking-tight text-gray-900 transition hover:text-black"
                             href="https://github.com/LandChit/wordle" target="_blank">Jotter (Discord Bot)</a>
                         <p class="mt-1 text-sm leading-relaxed text-gray-700">A discord bot designed for notetaking,
-                            organization, and sharing. This is a link to join the
-                            bot.
+                            organization, and sharing.
                         </p>
                     </div>
                     <div
@@ -131,8 +137,7 @@
                             href="https://discord.com/invite/5g7eZRURE?fbclid=IwY2xjawP-TMxleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR56ej1TunSpTLVvheZ_7Sm0t5XSitEMKE7E-nQiz8xGguaunRigdsGqexaT5g_aem_zXV8QPJdAXsRaMhSt0Uneg"
                             target="_blank">SolaraCity (FiveM Server)</a>
                         <p class="mt-1 text-sm leading-relaxed text-gray-700">A FiveM server focusing on roleplay rather
-                            than just fighting. This is a
-                            link for the Discord Server</p>
+                            than just fighting.</p>
                     </div>
                 </div>
 
@@ -141,14 +146,15 @@
 
         </section>
         <section class="min-h-screen border-t border-gray-200/80" id="about">
-            <div class="mx-auto flex min-h-screen w-full max-w-4xl flex-col justify-center gap-6 py-12 sm:py-16">
+            <div class="mx-auto flex w-full max-w-4xl flex-col justify-center gap-6 pt-12 sm:pt-16">
                 <h1 class="text-center text-3xl font-bold">About Me</h1>
                 <div class="w-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
                     <p class="text-lg leading-relaxed text-gray-800">I am a passionate software developer with a strong
                         interest in learning and
                         improving my skills. I have experience working on various projects, including web development,
                         and mobile app development. I am always eager to take on new challenges and
-                        collaborate with others to create innovative solutions.</p>
+                        collaborate with others to create innovative solutions.
+                    </p>
                     <!-- Socials -->
                     <div class="mt-5 flex flex-wrap gap-3">
                         <a href="https://t.me/LandChit" target="_blank"
@@ -163,6 +169,21 @@
                     </div>
                 </div>
             </div>
+
+            <div class="mx-auto flex w-full max-w-4xl flex-col justify-center gap-6 py-6 sm:py-8">
+                <h2 class="text-center text-2xl font-bold">Certifications</h2>
+                <div class="grid w-full grid-cols-1 gap-3 p-4 sm:grid-cols-2">
+                    <div
+                        class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+                        <span class="text-lg font-semibold text-gray-900" target="_blank">Google Developer on Campus Gem
+                            in AI</span>
+                        <p class="mt-1 text-sm leading-relaxed text-gray-700">
+                            Aims to teach the proper use of AI tools and techniques, fostering responsible and effective
+                            AI adoption in various industries.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="border-t border-gray-200/80 py-16 sm:py-20" id="contact">
@@ -173,7 +194,7 @@
                         Send a message directly to
                         <a href="mailto:lance@landchit.dev"
                             class="font-semibold text-gray-900 hover:underline">lance@landchit.dev</a>
-                        this is prefered.
+                        this is preferred.
                     </p>
 
                     <form action="https://formsubmit.co/lance@landchit.dev" method="POST" class="mt-6 space-y-4">

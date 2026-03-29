@@ -200,14 +200,35 @@
   }
 }
 @layer utilities {
+  .visible {
+    visibility: visible;
+  }
   .absolute {
     position: absolute;
+  }
+  .fixed {
+    position: fixed;
   }
   .relative {
     position: relative;
   }
   .inset-0 {
     inset: calc(var(--spacing) * 0);
+  }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
+  .bottom-8 {
+    bottom: calc(var(--spacing) * 8);
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
+  .z-40 {
+    z-index: 40;
   }
   .col-span-2 {
     grid-column: span 2 / span 2;
@@ -238,6 +259,9 @@
   }
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
+  }
+  .mt-20 {
+    margin-top: calc(var(--spacing) * 20);
   }
   .mb-1 {
     margin-bottom: calc(var(--spacing) * 1);
@@ -284,6 +308,9 @@
   .border-collapse {
     border-collapse: collapse;
   }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
   .resize {
     resize: both;
   }
@@ -322,6 +349,9 @@
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
+  }
+  .gap-12 {
+    gap: calc(var(--spacing) * 12);
   }
   .space-y-4 {
     :where(& > :not(:last-child)) {
@@ -436,6 +466,12 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
+  .py-5 {
+    padding-block: calc(var(--spacing) * 5);
+  }
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
+  }
   .py-12 {
     padding-block: calc(var(--spacing) * 12);
   }
@@ -444,6 +480,9 @@
   }
   .pt-7 {
     padding-top: calc(var(--spacing) * 7);
+  }
+  .pt-12 {
+    padding-top: calc(var(--spacing) * 12);
   }
   .pt-\[90\%\] {
     padding-top: 90%;
@@ -531,6 +570,10 @@
   }
   .shadow-\[0_20px_50px_-20px_rgba\(0\,0\,0\,0\.25\)\] {
     --tw-shadow: 0 20px 50px -20px var(--tw-shadow-color, rgba(0,0,0,0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-lg {
+    --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-sm {
@@ -655,6 +698,11 @@
       padding-inline: calc(var(--spacing) * 8);
     }
   }
+  .sm\:py-8 {
+    @media (width >= 40rem) {
+      padding-block: calc(var(--spacing) * 8);
+    }
+  }
   .sm\:py-16 {
     @media (width >= 40rem) {
       padding-block: calc(var(--spacing) * 16);
@@ -665,6 +713,31 @@
       padding-block: calc(var(--spacing) * 20);
     }
   }
+  .sm\:pt-16 {
+    @media (width >= 40rem) {
+      padding-top: calc(var(--spacing) * 16);
+    }
+  }
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-space-y-reverse {
   syntax: "*";
@@ -818,6 +891,11 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-gradient-position: initial;
