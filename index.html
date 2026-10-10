@@ -1,234 +1,475 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/output.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LandChit: software developer. Projects include Noggin and Patty."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Site: Space Grotesk + Manrope + JetBrains Mono. Featured cards: Nunito (Noggin), Sora (Patty) -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Manrope:wght@400;500;600;700;800&family=Nunito:wght@600;900&family=Sora:wght@700&family=Space+Grotesk:wght@500;700&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/navigation_scroll.js" defer></script>
     <title>LandChit</title>
-</head>
+  </head>
 
-<body class="bg-white text-black pt-7 px-7 pb-20">
+  <body>
     <!-- Floating Home Button -->
-    <button id="floatingHome" onclick="window.scrollTo({top: 0});"
-        class="rounded-full bg-black px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-gray-800">
-        ↑
+    <button
+      id="floatingHome"
+      onclick="window.scrollTo({ top: 0 })"
+      aria-label="Back to top"
+    >
+      ↑
     </button>
 
-    <div style="min-height: 100vh;" id="home">
-        <div class="fixed left-0 right-0 top-0 z-40 flex justify-between px-7 pt-7" id="nav">
-            <div class="">
-                <span class="text-4xl font-bold">Chit</span>
+    <header id="nav">
+      <div class="wrap nav">
+        <a class="brand" href="#home">Chit<span>.</span></a>
+        <nav class="nav-links">
+          <a href="#projects">Projects</a>
+          <a href="#technologies">Stack</a>
+          <a href="#about">About</a>
+          <a class="hide-sm" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="wrap hero-grid">
+          <div>
+            <p class="label">Software developer</p>
+            <h1>Hi, I'm Chit. I build <span class="mark">apps</span> people use.</h1>
+            <p class="lede">
+              From an offline study app to a personal finance tracker, I learn
+              by shipping real projects with Flutter, Python and Java.
+            </p>
+            <div class="btn-row">
+              <a href="#contact" class="btn btn-ink">Contact Me</a>
+              <a
+                href="https://github.com/LandChit"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-line"
+                >GitHub</a
+              >
             </div>
-            <div class="flex items-center gap-4 font-bold">
-                <a href="#technologies"> Technologies</a>
-                <a href="#projects"> Projects</a>
-                <a href="#about"> About Me</a>
+            <ul class="stats">
+              <li><strong>2</strong><span>apps shipped</span></li>
+              <li><strong>5</strong><span>side projects</span></li>
+              <li><strong>6</strong><span>tools in my stack</span></li>
+            </ul>
+          </div>
+          <div class="portrait">
+            <div class="portrait-frame">
+              <img src="assets/img/profile.png" alt="Portrait of Chit" />
             </div>
+            <span class="tag">Building Noggin &amp; Patty</span>
+          </div>
         </div>
-        <div class="flex justify-center mt-20">
-            <div class="relative w-150 sm mx-auto">
-                <div class="absolute bg-gray-200 w-full h-full"></div>
+      </section>
 
-                <img src="assets/img/profile.png" alt="profile" class="w-full h-auto"
-                    style="mask-image: linear-gradient(to top, transparent, black 40%);">
-
-                <div class="absolute inset-0 flex pt-[90%] justify-center ">
-                    <div class="flex flex-row gap-3 h-fit">
-                        <a href="#contact"
-                            class="bg-black hover:bg-gray-800 hover:outline-gray-800 outline-3 outline-black text-white font-bold py-3 px-7 rounded">
-                            Contact Me
-                        </a>
-                        <a class="bg-gray-700/10 outline-3  hover:bg-gray-700/20 hover:text-gray-900 font-bold py-3 px-10 rounded"
-                            href="https://github.com/LandChit" target="_blank">
-                            Github
-                        </a>
-                    </div>
-                </div>
+      <section class="section" id="projects">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="label">Projects</p>
+              <h2>Things I've shipped.</h2>
             </div>
+            <p>Two apps with their own sites, plus the tools, bots and configs I've built along the way.</p>
+          </div>
+
+          <div class="featured">
+            <!-- Noggin: styled after noggin.landchit.dev -->
+            <article class="fp noggin">
+              <div class="fp-media">
+                <span class="fp-tag">Featured</span>
+                <div class="device">
+                  <img
+                    src="https://noggin.landchit.dev/assets/img/screen-home.webp"
+                    alt="Noggin home screen with pinned courses and the next study block"
+                    width="560"
+                    height="960"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+              <div class="fp-body">
+                <div class="fp-title">
+                  <img
+                    src="https://noggin.landchit.dev/assets/img/icon-192.png"
+                    alt=""
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                  />
+                  <div>
+                    <h3>Noggin</h3>
+                    <p class="tagline">
+                      Your whole semester, <span class="hl">offline</span>.
+                    </p>
+                  </div>
+                </div>
+                <p>
+                  Notes, quizzes and spaced-repetition flashcards in one app. No
+                  account, no Wi-Fi, no ads.
+                </p>
+                <ul class="ticks">
+                  <li style="--c: #ff8a3d">
+                    Block notes with tables, LaTeX maths and code
+                  </li>
+                  <li style="--c: #6e4de6">
+                    Six quiz types with partial credit
+                  </li>
+                  <li style="--c: #29c17e">Spaced-repetition flashcards</li>
+                </ul>
+                <ul class="chips">
+                  <li>Flutter</li>
+                  <li>Windows</li>
+                  <li>Android</li>
+                </ul>
+                <div class="fp-actions">
+                  <a
+                    class="btn-noggin"
+                    href="https://noggin.landchit.dev"
+                    target="_blank"
+                    rel="noopener"
+                    >Visit Noggin →</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Patty: styled after patty.landchit.dev -->
+            <article class="fp patty">
+              <div class="fp-media">
+                <span class="fp-tag">Featured</span>
+                <div class="device">
+                  <img
+                    src="https://patty.landchit.dev/assets/images/home_screen.png"
+                    alt="Patty home overview with balance, goals and recent activity"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+              <div class="fp-body">
+                <div class="fp-title">
+                  <img
+                    src="https://patty.landchit.dev/assets/images/logo.png"
+                    alt=""
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                  />
+                  <div>
+                    <h3>PATTY</h3>
+                    <p class="tagline">Smart Practical Finance</p>
+                  </div>
+                </div>
+                <p>
+                  Simple, clear, and actionable personal finance for everyday
+                  spending, subscriptions and savings goals.
+                </p>
+                <ul class="ticks">
+                  <li>Wallets &amp; accounts <span>Multi-wallet</span></li>
+                  <li>Income &amp; expense feed <span>Categorised</span></li>
+                  <li>
+                    7-day analysis &amp; savings goals <span>On track</span>
+                  </li>
+                </ul>
+                <ul class="chips">
+                  <li>Flutter</li>
+                  <li>Mobile</li>
+                  <li>Personal finance</li>
+                </ul>
+                <div class="fp-actions">
+                  <a
+                    class="btn-patty"
+                    href="https://patty.landchit.dev"
+                    target="_blank"
+                    rel="noopener"
+                    >Visit Patty →</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <h3 class="sub-head">More projects</h3>
+          <div class="project-grid">
+            <a
+              class="card project"
+              href="https://github.com/LandChit/reviewerpy-cli"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="num">01</span>
+              <h3>ReviewerPy</h3>
+              <p>
+                The predecessor for Noggin that have I built to help study. It
+                helps with asking questions and memorization.
+              </p>
+              <span class="go">GitHub →</span>
+            </a>
+            <a
+              class="card project"
+              href="https://github.com/LandChit/Chitils"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="num">02</span>
+              <h3>Chitils</h3>
+              <p>
+                Xiaomi Phone Utility app specifically for the POCO X3 GT.
+                Although it may also work on other phones.
+              </p>
+              <span class="go">GitHub →</span>
+            </a>
+            <a
+              class="card project"
+              href="https://github.com/LandChit/wordle"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="num">03</span>
+              <h3>Jotter (Discord Bot)</h3>
+              <p>
+                A discord bot designed for notetaking, organization, and
+                sharing.
+              </p>
+              <span class="go">GitHub →</span>
+            </a>
+            <a
+              class="card project"
+              href="https://github.com/LandChit/archdots"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="num">04</span>
+              <h3>ArchLinux DotFiles</h3>
+              <p>My personal Arch Linux configuration files.</p>
+              <span class="go">GitHub →</span>
+            </a>
+            <a
+              class="card project"
+              href="https://discord.com/invite/5g7eZRURE?fbclid=IwY2xjawP-TMxleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR56ej1TunSpTLVvheZ_7Sm0t5XSitEMKE7E-nQiz8xGguaunRigdsGqexaT5g_aem_zXV8QPJdAXsRaMhSt0Uneg"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="num">05</span>
+              <h3>SolaraCity (FiveM Server)</h3>
+              <p>
+                A FiveM server focusing on roleplay rather than just fighting.
+              </p>
+              <span class="go">Discord →</span>
+            </a>
+          </div>
         </div>
-    </div>
-    <div id="content"
-        class="relative mt-12 overflow-hidden rounded-3xl border border-gray-200 bg-gradient-to-b from-gray-50 via-white to-gray-100 px-4 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.25)] sm:px-8">
-        <section class="min-h-screen" id="technologies">
-            <div class="mx-auto flex w-full max-w-4xl flex-col justify-center gap-6 py-12 sm:py-16">
-                <h1 class="text-center text-3xl font-bold">Technologies</h1>
-                <div class="grid w-full auto-rows-[110px] grid-cols-2 gap-3 p-4 sm:grid-cols-4">
-                    <div
-                        class="col-span-2 row-span-2 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-                        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500">Core Stack</p>
-                        <h2 class="mt-2 text-2xl font-semibold tracking-tight text-gray-900">What I Build With</h2>
-                        <p class="mt-3 text-sm leading-relaxed text-gray-700">Even though my knowledge is still
-                            growing, I stay consistent and keep shipping projects with this set of technologies.</p>
-                    </div>
+      </section>
 
-                    <div
-                        class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Flutter_logo.svg" alt="Flutter"
-                            class="h-full w-full object-contain">
-                    </div>
-                    <div
-                        class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-                        <img src="assets/img/Java_programming_language_logo.png" alt="Java"
-                            class="h-full w-full object-contain">
-                    </div>
-                    <div
-                        class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/120px-Python-logo-notext.svg.png"
-                            alt="Python" class="h-full w-full object-contain">
-                    </div>
-                    <div
-                        class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-                        <img src="assets/img/docker-mark-blue.svg" alt="Docker" class="h-full w-full object-contain">
-                    </div>
-                    <div
-                        class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-                        <img src="assets/img/Flask_logo.png" alt="Flask" class="h-full w-full object-contain">
-                    </div>
-                    <div
-                        class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/960px-Octicons-mark-github.svg.png?20180806170715"
-                            alt="GitHub" class="h-full w-full object-contain">
-                    </div>
-                </div>
+      <section class="section" id="technologies">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="label">Stack</p>
+              <h2>What I build with.</h2>
             </div>
-        </section>
-
-        <section class="min-h-screen border-t border-gray-200/80" id="projects">
-            <div class="mx-auto flex w-full max-w-4xl flex-col justify-center gap-6 py-12 sm:py-16">
-                <h1 class="text-center text-3xl font-bold">Projects</h1>
-                <div class="grid w-full grid-cols-1 gap-3 p-4 sm:grid-cols-2">
-                    <div
-                        class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-                        <a class="text-lg font-semibold tracking-tight text-gray-900 transition hover:text-black"
-                            href="https://github.com/LandChit/reviewerpy-cli" target="_blank">ReviewerPy</a>
-                        <p class="mt-1 text-sm leading-relaxed text-gray-700">This is a simple tool that I built to help
-                            study. It helps with asking questions and
-                            memorization.</p>
-                    </div>
-                    <div
-                        class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-                        <a class="text-lg font-semibold tracking-tight text-gray-900 transition hover:text-black"
-                            href="https://github.com/LandChit/Chitils" target="_blank">Chitils</a>
-                        <p class="mt-1 text-sm leading-relaxed text-gray-700">Xiaomi Phone Utility app specifically for
-                            the POCO X3 GT. Although it may also work on other phones.</p>
-                    </div>
-                    <div
-                        class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-                        <a class="text-lg font-semibold tracking-tight text-gray-900 transition hover:text-black"
-                            href="https://github.com/LandChit/wordle" target="_blank">Jotter (Discord Bot)</a>
-                        <p class="mt-1 text-sm leading-relaxed text-gray-700">A discord bot designed for notetaking,
-                            organization, and sharing.
-                        </p>
-                    </div>
-                    <div
-                        class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-                        <a class="text-lg font-semibold tracking-tight text-gray-900 transition hover:text-black"
-                            href="https://github.com/LandChit/archdots" target="_blank">ArchLinux DotFiles</a>
-                        <p class="mt-1 text-sm leading-relaxed text-gray-700">My personal Arch Linux configuration
-                            files.</p>
-                    </div>
-                    <div
-                        class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:col-span-2">
-                        <a class="text-lg font-semibold tracking-tight text-gray-900 transition hover:text-black"
-                            href="https://discord.com/invite/5g7eZRURE?fbclid=IwY2xjawP-TMxleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR56ej1TunSpTLVvheZ_7Sm0t5XSitEMKE7E-nQiz8xGguaunRigdsGqexaT5g_aem_zXV8QPJdAXsRaMhSt0Uneg"
-                            target="_blank">SolaraCity (FiveM Server)</a>
-                        <p class="mt-1 text-sm leading-relaxed text-gray-700">A FiveM server focusing on roleplay rather
-                            than just fighting.</p>
-                    </div>
-                </div>
-
-
+          </div>
+          <div class="bento">
+            <div class="card intro">
+              <p class="label">Core stack</p>
+              <h3>Always growing.</h3>
+              <p>
+                Even though my knowledge is still growing, I stay consistent and
+                keep shipping projects with this set of technologies.
+              </p>
             </div>
+            <div class="card lift tile">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/79/Flutter_logo.svg"
+                alt=""
+              />
+              <span>Flutter</span>
+            </div>
+            <div class="card lift tile">
+              <img src="assets/img/Java_programming_language_logo.png" alt="" />
+              <span>Java</span>
+            </div>
+            <div class="card lift tile">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/120px-Python-logo-notext.svg.png"
+                alt=""
+              />
+              <span>Python</span>
+            </div>
+            <div class="card lift tile">
+              <img src="assets/img/docker-mark-blue.svg" alt="" />
+              <span>Docker</span>
+            </div>
+            <div class="card lift tile">
+              <img src="assets/img/Flask_logo.png" alt="" />
+              <span>Flask</span>
+            </div>
+            <div class="card lift tile">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/960px-Octicons-mark-github.svg.png?20180806170715"
+                alt=""
+              />
+              <span>GitHub</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        </section>
-        <section class="min-h-screen border-t border-gray-200/80" id="about">
-            <div class="mx-auto flex w-full max-w-4xl flex-col justify-center gap-6 pt-12 sm:pt-16">
-                <h1 class="text-center text-3xl font-bold">About Me</h1>
-                <div class="w-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-                    <p class="text-lg leading-relaxed text-gray-800">I am a passionate software developer with a strong
-                        interest in learning and
-                        improving my skills. I have experience working on various projects, including web development,
-                        and mobile app development. I am always eager to take on new challenges and
-                        collaborate with others to create innovative solutions.
+      <section class="section" id="about">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="label">About me</p>
+              <h2>Learning by building.</h2>
+            </div>
+          </div>
+          <div class="about-grid">
+            <div>
+              <p class="bio">
+                I am a passionate software developer with a strong interest in
+                learning and improving my skills. I have experience working on
+                various projects, including web development, and mobile app
+                development. I am always eager to take on new challenges and
+                collaborate with others to create innovative solutions.
+              </p>
+              <p class="label certs-label">Certifications</p>
+              <ul class="certs">
+                <li class="cert">
+                  <img
+                    class="badge-img"
+                    src="https://images.credly.com/size/220x220/images/2210b6fe-0eda-415a-8aba-6c1400566728/ITS-Badges_Java_1200px.png"
+                    alt="IT Specialist - Java badge"
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <div>
+                    <h3>IT Specialist - Java</h3>
+                    <p class="cert-meta">
+                      Certiport, a Pearson VUE business · Issued Jun 2026
                     </p>
-                    <!-- Socials -->
-                    <div class="mt-5 flex flex-wrap gap-3">
-                        <a href="https://t.me/LandChit" target="_blank"
-                            class="rounded-full border border-gray-300 px-4 py-1.5 text-sm font-medium text-gray-700 transition hover:border-gray-900 hover:text-gray-900">Telegram</a>
-                        <a href="https://github.com/LandChit" target="_blank"
-                            class="rounded-full border border-gray-300 px-4 py-1.5 text-sm font-medium text-gray-700 transition hover:border-gray-900 hover:text-gray-900">GitHub</a>
-                        <a href="https://twitter.com/LandChit" target="_blank"
-                            class="rounded-full border border-gray-300 px-4 py-1.5 text-sm font-medium text-gray-700 transition hover:border-gray-900 hover:text-gray-900">Twitter</a>
-                        <a href="https://www.youtube.com/@landchit " target="_blank"
-                            class="rounded-full border border-gray-300 px-4 py-1.5 text-sm font-medium text-gray-700 transition hover:border-gray-900 hover:text-gray-900">Youtube</a>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="mx-auto flex w-full max-w-4xl flex-col justify-center gap-6 py-6 sm:py-8">
-                <h2 class="text-center text-2xl font-bold">Certifications</h2>
-                <div class="grid w-full grid-cols-1 gap-3 p-4 sm:grid-cols-2">
-                    <div
-                        class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-                        <span class="text-lg font-semibold text-gray-900" target="_blank">Google Developer on Campus Gem
-                            in AI</span>
-                        <p class="mt-1 text-sm leading-relaxed text-gray-700">
-                            Aims to teach the proper use of AI tools and techniques, fostering responsible and effective
-                            AI adoption in various industries.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="border-t border-gray-200/80 py-16 sm:py-20" id="contact">
-            <div class="mx-auto w-full max-w-3xl">
-                <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-                    <h1 class="text-center text-3xl font-bold">Contact</h1>
-                    <p class="mt-3 text-center text-sm text-gray-600">
-                        Send a message directly to
-                        <a href="mailto:lance@landchit.dev"
-                            class="font-semibold text-gray-900 hover:underline">lance@landchit.dev</a>
-                        this is preferred.
+                    <p>
+                      Recognize, write, and debug Java code that logically
+                      solves a problem.
                     </p>
-
-                    <form action="https://formsubmit.co/99c6b18f01b01691ddff936055386195" method="POST" class="mt-6 space-y-4">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_subject" value="New message from landchit.dev">
-
-                        <div>
-                            <label for="name" class="mb-1 block text-sm font-medium text-gray-700">Name</label>
-                            <input id="name" name="name" type="text" required
-                                class="w-full rounded-xl border border-gray-300 px-4 py-2.5 text-sm outline-none transition focus:border-gray-900">
-                        </div>
-
-                        <div>
-                            <label for="email" class="mb-1 block text-sm font-medium text-gray-700">Email</label>
-                            <input id="email" name="email" type="email" required
-                                class="w-full rounded-xl border border-gray-300 px-4 py-2.5 text-sm outline-none transition focus:border-gray-900">
-                        </div>
-
-                        <div>
-                            <label for="message" class="mb-1 block text-sm font-medium text-gray-700">Message</label>
-                            <textarea id="message" name="message" rows="5" required
-                                class="w-full rounded-xl border border-gray-300 px-4 py-2.5 text-sm outline-none transition focus:border-gray-900"></textarea>
-                        </div>
-
-                        <button type="submit"
-                            class="w-full rounded-xl bg-black px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-gray-800">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
+                    <a
+                      class="verify"
+                      href="https://www.credly.com/badges/ef9e2649-4ac1-4007-9924-bf3d80fa8711"
+                      target="_blank"
+                      rel="noopener"
+                      >Verify on Credly ↗</a
+                    >
+                  </div>
+                </li>
+                <li class="cert">
+                  <span class="badge">AI</span>
+                  <div>
+                    <h3>Google Developer on Campus Gem in AI</h3>
+                    <p>
+                      Aims to teach the proper use of AI tools and techniques,
+                      fostering responsible and effective AI adoption in various
+                      industries.
+                    </p>
+                  </div>
+                </li>
+              </ul>
             </div>
-        </section>
-    </div>
+            <ul class="rows">
+              <li>
+                <a href="https://github.com/LandChit" target="_blank" rel="noopener"
+                  >GitHub <span>LandChit ↗</span></a
+                >
+              </li>
+              <li>
+                <a href="https://t.me/LandChit" target="_blank" rel="noopener"
+                  >Telegram <span>@LandChit ↗</span></a
+                >
+              </li>
+              <li>
+                <a href="https://twitter.com/LandChit" target="_blank" rel="noopener"
+                  >Twitter <span>@LandChit ↗</span></a
+                >
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@landchit" target="_blank" rel="noopener"
+                  >YouTube <span>@landchit ↗</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-</body>
+      <section class="section" id="contact">
+        <div class="wrap contact-grid">
+          <div>
+            <p class="label">Contact</p>
+            <h2>Let's talk.</h2>
+            <p class="lede">
+              Email is preferred, but the form works too.
+            </p>
+            <a class="email" href="mailto:lance@landchit.dev"
+              >lance@landchit.dev <small>Preferred</small></a
+            >
+          </div>
 
+          <form
+            action="https://formsubmit.co/99c6b18f01b01691ddff936055386195"
+            method="POST"
+            class="form"
+          >
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_subject"
+              value="New message from landchit.dev"
+            />
+
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-ink">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-row">
+        <span>© 2026 LandChit</span>
+        <nav>
+          <a href="https://noggin.landchit.dev" target="_blank" rel="noopener">Noggin</a>
+          <a href="https://patty.landchit.dev" target="_blank" rel="noopener">Patty</a>
+          <a href="https://github.com/LandChit" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>
