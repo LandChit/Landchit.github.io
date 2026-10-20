@@ -95,6 +95,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .btn-ink { background: var(--ink); color: #FFFFFF; }
 .btn-ink:hover { box-shadow: 3px 3px 0 var(--accent); }
 .btn-line { background: var(--surface); color: var(--ink); }
+.btn-coffee { background: #FFDD00; color: var(--ink); }
 .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* Hero */
